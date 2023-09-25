@@ -27,6 +27,18 @@ const voting = (e) => {
     const password = userId.value;
     const select = voteOptions.value;
 
+    if(validUserIds.get(user) === password) {
+        //voted?
+        if( votedUsers.has(user)){
+            alert('You have already voted!');
+        } else {
+            //valid vote
+            votedUsers.add(user);
+            voteCounts.set(select, voteCounts.get(select)+1);
+        }
+    } else {
+        alert('Incorrect data');
+    }
 
     updateResults();
 };
