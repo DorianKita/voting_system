@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Voting project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Voting system</h1>
+    <form class="voting-form">
+        <label>User name: <input type="text" class="user-name" required></label>
+        <label>Password (8 digits)<input type="text" class="user-id" required maxlength="8" minlength="8"></label>
+        <select class="vote-options">
+            <option value="Option 1">Yes</option>
+            <option value="Option 2">No</option>
+            <option value="Option 3">Maybe</option>
+        </select>
+        <button type="submit">Vote!</button>
+    </form>
+
+    <div class="vote-results"></div>
 
     <script src="app.js"></script>
 </body>
